@@ -18,7 +18,7 @@ const dbmanager = require('./dbmanager');
  * Delete ours - set yours
  * After that bot will react on commands inside this chats
  */
-const admins = ['74169393', '-1001052392095'];
+const admins = ['260194772', '-168736842'];
 
 function checkIfMessageIsCommand (command, messageText) {
   "use strict";
