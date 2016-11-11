@@ -68,7 +68,7 @@ module.exports = {
   },
   clientMenuOptions: {
     postNewJob: '🔨 Создать задание',
-    myJobs: '🛠 Созданные задания',
+    myJobs: '🛠 Мои задания',
     back: '🔙 Назад',
   },
   freelanceMenuOptions: {
