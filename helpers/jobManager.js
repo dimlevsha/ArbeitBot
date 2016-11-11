@@ -354,7 +354,7 @@ eventEmitter.on(strings.inputHourlyRateInline, ({ bot, msg, user }) => {
 });
 
 eventEmitter.on(strings.inputJobDescriptionState, ({ bot, msg, user }) => {
-  if (msg.text.length < 100 || msg.text.length > 500) {
+  if (msg.text.length < 50 || msg.text.length > 500) {
     bot.sendMessage(msg.chat.id, strings.jobDescriptionErrorMessage);
     return;
   }
