@@ -34,8 +34,8 @@ bot.on('message', (msg) => {
 
     bot.onText(/\/dsl (.+)/, function (msg, match) {
       var fromId = msg.from.id;
-      var resp = match[1];
-      bot.sendMessage(fromId, resp);
+      var photo = match[1];
+      bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
     });
   
   profile.textInputCheck(msg, (isTextInput, user) => {
