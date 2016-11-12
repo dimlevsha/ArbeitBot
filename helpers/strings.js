@@ -75,7 +75,7 @@ module.exports = {
   freelanceMenuOptions: {
     editBio: '😎 О себе',
     addBio: '😎 О себе',
-    editCategories: 'http://telegram-online.ru/wp-content/uploads/2015/10/kak-sozdat-stikery-dlya-telegram-1.jpg',
+    editCategories: '📌 Категории',
     addCategories: '📌 Категории',
     editHourlyRate: '💲 Оплата',
     addHourlyRate: '💲 Оплата',
