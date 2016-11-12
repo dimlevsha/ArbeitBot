@@ -43,6 +43,6 @@ http.createServer((req, res) => {
     res.end('404');
   }
   
-}).listen(process.env.PORT || 80, () => {
+}).listen(process.env.PORT || 5000, () => {
   console.log('Statistics server listening on: 5000'); // eslint-disable-line no-console
 });
