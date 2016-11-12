@@ -88,6 +88,7 @@ module.exports = {
     '500₽ – 1000₽', '1000₽ – 5000₽', '5000+'
     
   ],
+  hourlyRateAllRatesOption: 'All hourly rates',
   selectedCategory: '✅ ',
   selectedHourlyRate: '✅ ',
   selectedLanguage: '✅ ',
