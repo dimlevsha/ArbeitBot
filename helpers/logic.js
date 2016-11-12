@@ -31,6 +31,19 @@ bot.on('message', (msg) => {
     profile.sendAskForUsername(bot, msg);
     return;
   }
+  
+  var filename = './webcam.jpg';
+  
+  bot.on('message', function (msg) {
+    var chatId = msg.chat.id;
+    console.log(msg);
+    if(msg.text == 'photo')
+        fs.exists(filename, function (exists) {
+            if(exists)
+                fs.unlinkSync(filename);function(err) {
+                console.log(err ? err : 'Success!');
+                  bot.sendPhoto(chatId, filename, {caption: "It's your photo!"});
+                  })
 
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
