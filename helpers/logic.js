@@ -32,11 +32,11 @@ bot.on('message', (msg) => {
     return;
   }
 
-    bot.onText(/\/dsl (.+)/, function (msg) {
-      var chatId = msg.from.id;
-      
-      bot.sendPhoto(chatId, http://hsto.org/files/cbf/706/2ed/cbf7062edb974841b26f142bbb43d05c.png, {caption: 'Милые котята'});
-    });
+     bot.onText(/\/dsl (.+)/, function (msg) {
+      var chatId = msg.chat.id;
+      // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
+      var photo = 'https://hsto.org/files/cbf/706/2ed/cbf7062edb974841b26f142bbb43d05c.png';
+      bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
   
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
