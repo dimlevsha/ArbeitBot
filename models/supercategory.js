@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-/** Dependencies */
+/** Depende6ncies */
 const mongoose = require('mongoose');
 
 /** Schema */
