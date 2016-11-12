@@ -132,6 +132,7 @@ eventEmitter.on(strings.jobManageInline, ({ bot, msg, user }) => {
       .then((job) => {
         const jobCopy = Object.create(job);
         jobCopy.state = strings.jobStates.removed;
+        adminReports.jobDeleted(bot, jobCopy);
         return jobCopy.save()
           .then((savedJob) => {
             updateJobMessage(savedJob, bot);
@@ -240,6 +241,8 @@ eventEmitter.on(strings.freelancerAcceptInline, ({ bot, msg, user }) => {
           .then((user) => {
             const jobCopy = Object.create(job);
 
+            adminReports.acceptOrRejectJobOffer(bot, job, user, option === strings.freelancerAcceptOptions.accept);
+
             if (option === strings.freelancerAcceptOptions.accept) {
               jobCopy.state = strings.jobStates.finished;
               jobCopy.save()
@@ -339,7 +342,7 @@ eventEmitter.on(strings.inputHourlyRateInline, ({ bot, msg, user }) => {
   const hourlyRate = options[1];
   const draftId = options[2];
 
-  if (strings.hourlyRateOptions.includes(hourlyRate)) {
+  if (strings.hourlyRateOptions.includes(hourlyRate) || hourlyRate === strings.hourlyRateAllRatesOption) {
     dbmanager.findJobById(draftId)
       .then((draft) => {
         const draftCopy = Object.create(draft);
@@ -530,7 +533,7 @@ function addDescriptionToJobDraft(bot, msg, user, description) {
     userCopy.job_drafts.splice(index, 1);
   }
 
-  userCopy.job_draft = undefined;
+  userCopy.current_job_draft = undefined;
   userCopy.jobs.push(jobDraft);
   userCopy.input_state = undefined;
 
@@ -792,6 +795,7 @@ function askForNewJobPriceRange(bot, msg, user, draft) {
       tempRow = [];
     }
   }
+  keyboard.unshift([{ text: strings.hourlyRateAllRatesOption, callback_data: `${strings.inputHourlyRateInline}${strings.inlineSeparator}${strings.hourlyRateAllRatesOption}${strings.inlineSeparator}${draft._id}` }]);
   keyboard.unshift([{ text: strings.jobCreateCancel, callback_data: `${strings.cancelJobCreationInline}${strings.inlineSeparator}${draft._id}` }]);
   keyboards.editMessage(bot,
     draft.current_inline_chat_id,
@@ -810,6 +814,11 @@ function askForNewJobPriceRange(bot, msg, user, draft) {
  */
 function askForNewJobDescription(bot, msg, user, draft) {
   const userCopy = Object.create(user);
+
+  if (user.current_job_draft) {
+    bot.sendMessage(msg.message.chat.id, strings.anotherJobDraftErrorMessage);
+    return;
+  }
 
   userCopy.input_state = strings.inputJobDescriptionState;
   userCopy.current_job_draft = draft;
@@ -877,6 +886,7 @@ function selectFreelancerForJob(bot, msg, userId, jobId) {
           jobCopy.state = strings.jobStates.freelancerChosen;
           return jobCopy.save()
             .then((newJob) => {
+              adminReports.selectedFreelancerForJob(bot, newJob, user);
               updateJobMessage(newJob, bot);
               updateFreelancerMessage(bot, msg, user, job);
             });
