@@ -32,19 +32,6 @@ bot.on('message', (msg) => {
     return;
   }
 
-  bot.onText(/\/echo (.+)/, function (msg) {
-  // 'msg' is the received Message from Telegram
-  // 'match' is the result of executing the regexp above on the text content
-  // of the message
-
-  var chatId = msg.chat.id;
-  var photo = "http://d39kbiy71leyho.cloudfront.net/wp-content/uploads/2016/05/09170020/cats-politics-TN.jpg"; // the captured "whatever"
-
-      // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
-     
-      bot.sendPhoto(chatId, photo);
-    
-    });
   
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
