@@ -35,7 +35,7 @@ bot.on('message', (msg) => {
      bot.onText(/\/dsl (.+)/, function (msg) {
       var chatId = msg.chat.id;
       // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
-      var photo = http://hsto.org/files/cbf/706/2ed/cbf7062edb974841b26f142bbb43d05c.png;
+      var photo = 'BQADAgADAQAD1EGCD2z1sAdETsBxAg';
       bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
   
   profile.textInputCheck(msg, (isTextInput, user) => {
