@@ -32,7 +32,7 @@ bot.on('message', (msg) => {
     return;
   }
 
-  bot.onText(/\/echo (.+)/, function (msg,) {
+  bot.onText(/\/echo (.+)/, function (msg) {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
