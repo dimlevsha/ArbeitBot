@@ -39,8 +39,10 @@ http.createServer((req, res) => {
       });
   } else {
     res.writeHead(404);
+    res.write("hello world");
     res.end('404');
   }
+  
 }).listen(process.env.PORT || 5000, () => {
   console.log('Statistics server listening on: 5000'); // eslint-disable-line no-console
 });
