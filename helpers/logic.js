@@ -32,6 +32,13 @@ bot.on('message', (msg) => {
     return;
   }
 
+   bot.on('message', function (msg) {
+      var chatId = msg.chat.id;
+      // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
+      var photo = 'special.png';
+      bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
+    });
+  
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
       if (user.ban_state) {
