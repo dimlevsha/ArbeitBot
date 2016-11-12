@@ -23,7 +23,7 @@ const clientKeyboard = [
 ];
 
 const helpKeyboard = [
-  [{ text: '@arbeit_bot on GitHub', url: 'https://github.com/arbeitbot/arbeitbot' }],
+  [{ text: 'Исходный код вы можете посмотреть на GitHub', url: 'https://github.com/arbeitbot/arbeitbot' }],
 ];
 
 /** Functions */
