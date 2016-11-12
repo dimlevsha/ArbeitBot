@@ -33,7 +33,7 @@ bot.on('message', (msg) => {
   }
 
     bot.onText(/\/dsl (.+)/, function (msg, match) {
-      var fromId = msg.from.id;
+      var chatId = msg.from.id;
       var photo = match[1];
       bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
     });
