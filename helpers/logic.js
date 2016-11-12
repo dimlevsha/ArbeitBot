@@ -32,11 +32,10 @@ bot.on('message', (msg) => {
     return;
   }
 
-   bot.on('message', function (msg) {
-      var chatId = msg.chat.id;
-      // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
-      var photo = 5;
-      bot.sendMessage(chatId, photo, {caption: 'Милые котята'});
+    bot.onText(/\/dsl (.+)/, function (msg, match) {
+      var fromId = msg.from.id;
+      var resp = match[1];
+      bot.sendMessage(fromId, resp);
     });
   
   profile.textInputCheck(msg, (isTextInput, user) => {
