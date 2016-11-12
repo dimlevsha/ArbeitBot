@@ -27,9 +27,9 @@ global.eventEmitter.on(strings.categoryInline, ({ msg, bot }) => {
   const page = parseInt(msg.data.split(strings.inlineSeparator)[2], 10);
 
   if (command === strings.categoryLeft) {
-    editPage(bot, msg, page - 2);
+    editPage(bot, msg, page - 1);
   } else if (command === strings.categoryRight) {
-    editPage(bot, msg, page + 2);
+    editPage(bot, msg, page + 1);
   } else {
     dbmanager.toggleCategoryForUser(msg.message.chat.id, command)
       .then(({ user, isAdded }) => {
