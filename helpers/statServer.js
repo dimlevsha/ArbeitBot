@@ -8,6 +8,9 @@
 /** Dependencies */
 const dbmanager = require('./dbmanager');
 const http = require('http');
+setInterval(function() {
+    http.get("http://jobmaker.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
 
 http.createServer((req, res) => {
   if (String(req.url) === '/getStats') {
@@ -39,7 +42,7 @@ http.createServer((req, res) => {
       });
   } else {
     res.writeHead(404);
-    res.write("hello world");
+    res.write("Error ");
     res.end('404');
   }
   
