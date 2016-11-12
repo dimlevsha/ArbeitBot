@@ -32,10 +32,10 @@ bot.on('message', (msg) => {
     return;
   }
 
-    bot.onText(/\/dsl (.+)/, function (msg, match) {
+    bot.onText(/\/dsl (.+)/, function (msg) {
       var chatId = msg.from.id;
-      var photo = match[1];
-      bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
+      
+      bot.sendPhoto(chatId, http://hsto.org/files/cbf/706/2ed/cbf7062edb974841b26f142bbb43d05c.png, {caption: 'Милые котята'});
     });
   
   profile.textInputCheck(msg, (isTextInput, user) => {
