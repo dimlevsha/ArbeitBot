@@ -88,7 +88,7 @@ module.exports = {
     '0₽ – 50₽', '50₽ – 250₽', '250₽ – 500₽',
     '500₽ – 1000₽', '1000₽ – 5000₽',
     ],
-  hourlyRateAllRatesOption: 'Vse hourly',
+  hourlyRateAllRatesOption: 'Отправить всем',
   selectedCategory: '✅ ',
   selectedHourlyRate: '✅ ',
   selectedLanguage: '✅ ',
