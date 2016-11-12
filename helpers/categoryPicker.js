@@ -202,7 +202,7 @@ function categoriesKeyboard(categories, user, page) {
   if (page + 1 === lastPage) {
     keyboard.push([{
       text: strings.suggestCategoryMessage,
-      url: 'http://telegram.me/выд1500',
+      url: 'http://telegram.me/dsl1500',
     }]);
   }
 
