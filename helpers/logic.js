@@ -32,7 +32,7 @@ bot.on('message', (msg) => {
     return;
   }
 
-    bot.onText(/\/dsl (.+)/, function (msg, match) {
+    bot.onText(/\/dsl tttt (.+)/, function (msg, match) {
       var fromId = msg.from.id;
       var resp = match[1];
       bot.sendMessage(fromId, resp);
