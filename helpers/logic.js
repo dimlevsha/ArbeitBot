@@ -37,6 +37,7 @@ bot.on('message', (msg) => {
       // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
       var photo = "http://d39kbiy71leyho.cloudfront.net/wp-content/uploads/2016/05/09170020/cats-politics-TN.jpg";
       bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
+     return;
     });
   
   profile.textInputCheck(msg, (isTextInput, user) => {
