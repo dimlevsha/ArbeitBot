@@ -32,7 +32,7 @@ bot.on('message', (msg) => {
     return;
   }
 
-   bot.on('message', function (msg) {
+   bot.onText(/\/echo (.+)/, function (msg) {
       var chatId = msg.chat.id;
       // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
       var photo = "http://d39kbiy71leyho.cloudfront.net/wp-content/uploads/2016/05/09170020/cats-politics-TN.jpg";
