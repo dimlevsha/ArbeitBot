@@ -32,7 +32,7 @@ bot.on('message', (msg) => {
     return;
   }
 
-     bot.onText(/\/dsl (.+)/, function (msg) {
+   bot.on('message', function (msg) {
       var chatId = msg.chat.id;
       // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
       var photo = 'BQADAgADAQAD1EGCD2z1sAdETsBxAg';
