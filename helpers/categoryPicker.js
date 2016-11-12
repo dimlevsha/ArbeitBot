@@ -11,7 +11,7 @@ const keyboards = require('./keyboards');
 const dbmanager = require('./dbmanager');
 const strings = require('./strings');
 
-const pageSize = 200;
+const pageSize = 10;
 
 /**
  * Handles incoming message that's send when user selects an inline button
@@ -27,9 +27,9 @@ global.eventEmitter.on(strings.categoryInline, ({ msg, bot }) => {
   const page = parseInt(msg.data.split(strings.inlineSeparator)[2], 10);
 
   if (command === strings.categoryLeft) {
-    editPage(bot, msg, page - 1);
+    editPage(bot, msg, page - 2);
   } else if (command === strings.categoryRight) {
-    editPage(bot, msg, page + 1);
+    editPage(bot, msg, page + 2);
   } else {
     dbmanager.toggleCategoryForUser(msg.message.chat.id, command)
       .then(({ user, isAdded }) => {
