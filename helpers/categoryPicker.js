@@ -19,6 +19,23 @@ const pageSize = 10;
  * @param  {Telegram:Bot} bot - Bot that should send a response to this action
  * @param  {Telegram:Message} - msg Message that was received upon clicking an inline button
  */
+
+eventEmitter.on(strings.inputSupercategoryNameInline, ({ bot, msg, user }) => {
+ +  const options = msg.data.split(strings.inlineSeparator);
+ +  const supercategoryId = options[1];
+ +  const jobId = options[2];
+ +
+ +  dbmanager.findJobById(jobId, 'language')
+ +    .then(job =>
+ +      dbmanager.getSupercategoryById(supercategoryId, job.language)
+ +        .then((supercategory) => {
+ +          askForNewJobCategory(bot, msg, user, job, supercategory);
+ +        })
+ +    )
+ +    .catch(/** todo: handle error */);
+ +});
+   
+   
 global.eventEmitter.on(strings.categoryInline, ({ msg, bot }) => {
   const command = msg.data.split(strings.inlineSeparator)[1];
   const page = parseInt(msg.data.split(strings.inlineSeparator)[2], 10);
