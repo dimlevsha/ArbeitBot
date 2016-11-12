@@ -149,7 +149,7 @@ function categoriesKeyboard(categories, user, page) {
   const keyboard = [];
   let tempRow = [];
   for (let i = 0; i < allCategories.length; i += 1) {
-    const isOdd = (i % 3) === 1;
+    const isOdd = 1;
     const isLast = i === allCategories.length - 1;
     const currentCategory = allCategories[i];
 
