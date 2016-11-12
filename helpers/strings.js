@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+  anotherJobDraftErrorMessage: 'You are already entering description for another job draft. Please either cancel the currently active job draft or provide us with the job description for the currently active job draft.',
   reportThankYouMessage: 'Спасибо за то, что сообщили нам о нарушении! Наши модераторы немедленно рассотрят вашу заявку и предпримут все необходимое(^_<)',
   banMessage: 'На вас подали жалобу, и наши модераторы приняли решение о вашей блокировке.  Если это ошибка, то обращайтесь к администратору @dsl1500 и мы посмотрим, что можно сделать;)',
   loadingMessage: '😊 Загрузка...',
