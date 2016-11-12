@@ -11,7 +11,7 @@ const keyboards = require('./keyboards');
 const dbmanager = require('./dbmanager');
 const strings = require('./strings');
 
-const pageSize = 10;
+const pageSize = 20;
 
 /**
  * Handles incoming message that's send when user selects an inline button
