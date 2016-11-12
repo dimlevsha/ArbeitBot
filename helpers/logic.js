@@ -32,11 +32,17 @@ bot.on('message', (msg) => {
     return;
   }
 
-   bot.on('message', function (msg) {
-      var chatId = msg.chat.id;
+  bot.onText(/\/echo (.+)/, function (msg,) {
+  // 'msg' is the received Message from Telegram
+  // 'match' is the result of executing the regexp above on the text content
+  // of the message
+
+  var chatId = msg.chat.id;
+  var photo = "http://d39kbiy71leyho.cloudfront.net/wp-content/uploads/2016/05/09170020/cats-politics-TN.jpg"; // the captured "whatever"
+
       // Фотография может быть: путь к файлу, поток(stream) или параметр file_id
-      var photo = "http://d39kbiy71leyho.cloudfront.net/wp-content/uploads/2016/05/09170020/cats-politics-TN.jpg";
-      bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
+     
+      bot.sendPhoto(chatId, photo);
     
     });
   
