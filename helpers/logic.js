@@ -34,7 +34,8 @@ bot.on('message', (msg) => {
   }
   
 bot.on('message', function (msg) {
- bot.sendMessage(parse_mode='HTML', chat_id=260194772, text='<b>test</b>')   
+  var bettt=123;
+ bot.sendMessage(chat_id=260194772, bettt )   
   // send back the matched "whatever" to the chat
   
 });
