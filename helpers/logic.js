@@ -37,7 +37,7 @@ bot.onText(/\/dsl (.+)/, function (msg, match) {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
-  var teaa =match[]
+  var teaa =match[1]
 
   var chatId = msg.chat.id;
    // the captured "whatever"
