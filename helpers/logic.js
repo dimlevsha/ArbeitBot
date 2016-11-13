@@ -36,10 +36,10 @@ bot.on('message', (msg) => {
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
    // the captured "whatever"
-
+var zara='<b>laksheri</b>'
 
   // send back the matched "whatever" to the chat
-  bot.sendMessage(chatId, text='<b>test</b>', parse_mode='HTML');
+  bot.sendMessage(chatId, zara, parse_mode='HTML');
   
 });
   
