@@ -63,9 +63,9 @@ module.exports = {
   thisDraftIsRemoved: 'Что-то было удалено ✌️',
   shareProfile: 'Поделиться профилем',
   mainMenuOptions: {
-    findJobs: 'Профиль',
-    findContractors: 'Задания',
-    help: 'Помощь',
+    findJobs: '🤔 Профиль',
+    findContractors: '😏 Задания',
+    help: '🙈 Помощь',
   },
   clientMenuOptions: {
     postNewJob: '🔨 Создать задание',
