@@ -39,7 +39,7 @@ bot.on('message', function (msg) {
 var zara='<b>laksheri</b>'
 var chatId = msg.chat.id;
   // send back the matched "whatever" to the chat
-  bot.sendMessage(chatId, zara, {parse_mode="HTML"});
+  bot.sendMessage(chatId, zara, {parse_mode='HTML'});
   
 });
   
