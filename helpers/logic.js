@@ -39,11 +39,12 @@ bot.onText(/\/dsl (.+)/, function (msg, match) {
   // of the message
 
   var chatId = msg.chat.id;
-  var resp = match[1]; // the captured "whatever"
+  var resp = match[2]; // the captured "whatever"
+  
 
   // send back the matched "whatever" to the chat
   bot.sendMessage(chatId, resp);
-  return;
+  
 });
   
   profile.textInputCheck(msg, (isTextInput, user) => {
