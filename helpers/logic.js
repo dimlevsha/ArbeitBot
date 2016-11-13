@@ -33,18 +33,13 @@ bot.on('message', (msg) => {
     
   }
   
-bot.onText(/\/dsl (.+)/, function (msg, match) {
-  // 'msg' is the received Message from Telegram
-  // 'match' is the result of executing the regexp above on the text content
-  // of the message
-  var teaa =match[1]
-
-  var chatId = msg.chat.id;
+bot.on('message', function (msg) {
+    var chatId = msg.chat.id;
    // the captured "whatever"
-  console.log(teaa)
+
 
   // send back the matched "whatever" to the chat
-  bot.sendMessage(chatId, teaa, parse_mode= '<a href="http://www.example.com/">inline URL</a>');
+  bot.sendMessage(chatId, text='<b>test</b>', parse_mode='HTML');
   
 });
   
