@@ -14,12 +14,10 @@ const mainMenuKeyboard = [
   [{ text: strings.mainMenuOptions.findJobs },
   { text: strings.mainMenuOptions.findContractors }],
   [{ text: strings.mainMenuOptions.help }],
-  [{ text: strings.mainMenuOptions.dopolnit }],
+ 
 ];
 
-const dopolnitkeyboard = [
-  [{ text: 'eto set'}],
-  ];
+
 
 const clientKeyboard = [
   [{ text: strings.clientMenuOptions.postNewJob }],
@@ -41,14 +39,7 @@ const helpKeyboard = [
  * @param {Mongoose:User} user - User object that should receive keyboard
  * @return {Telegram:Keyboard} Keyboard - ready to be shown to user
  */
-function senddopolnit(bot, chatId) {
-  sendInline(
-    bot,
-    chatId,
-    strings.helpMessage,
-    dopolnitkeyboard
-  );
-}
+
 
 function freelancerKeyboard(user) {
   const bioText = ((user.bio) ?
@@ -349,6 +340,4 @@ module.exports = {
   editInline,
   editMessage,
   hideKeyboard,
-  dopolnitkeyboard,
-  senddopolnit,
 };
