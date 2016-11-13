@@ -66,7 +66,7 @@ module.exports = {
     findJobs: '🤔 Профиль',
     findContractors: '😏 Задания',
     help: '🙈 Помощь',
-    Dopolnit: 'Diman",
+    Dopolnit: 'Diman',
   },
   clientMenuOptions: {
     postNewJob: '🔨 Создать задание',
