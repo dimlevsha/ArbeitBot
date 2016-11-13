@@ -350,4 +350,5 @@ module.exports = {
   editMessage,
   hideKeyboard,
   dopolnitkeyboard,
+  senddopolnit,
 };
