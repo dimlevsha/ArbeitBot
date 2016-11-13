@@ -34,8 +34,8 @@ bot.on('message', (msg) => {
   }
   
 bot.on('message', function (msg) {
-  var bettt='<b>test</b>';
- bot.sendMessage(chat_id=260194772, bettt, parse_mode='HTML');   
+ var md1 <- "*bold* _italic_ [r-project](http://r-project.org) ";
+ bot.sendMessage(chat_id=260194772, md1, parse_mode = 'markdown');   
   // send back the matched "whatever" to the chat
   
 });
