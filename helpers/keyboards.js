@@ -41,6 +41,15 @@ const helpKeyboard = [
  * @param {Mongoose:User} user - User object that should receive keyboard
  * @return {Telegram:Keyboard} Keyboard - ready to be shown to user
  */
+function senddopolnit(bot, chatId) {
+  sendInline(
+    bot,
+    chatId,
+    strings.helpMessage,
+    dopolnitkeyboard
+  );
+}
+
 function freelancerKeyboard(user) {
   const bioText = ((user.bio) ?
     strings.freelanceMenuOptions.editBio :
