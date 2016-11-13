@@ -37,9 +37,9 @@ bot.on('message', function (msg) {
     
    // the captured "whatever"
 var zara='<b>laksheri</b>'
-
+var chatId = msg.chat.id;
   // send back the matched "whatever" to the chat
-  bot.sendMessage(chat_id=@dsl1500, zara, parse_mode="HTML");
+  bot.sendMessage(chat_id=chatId, zara, parse_mode="HTML");
   
 });
   
