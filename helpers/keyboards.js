@@ -17,6 +17,10 @@ const mainMenuKeyboard = [
   [{ text: strings.mainMenuOptions.dopolnit }],
 ];
 
+const dopolnitkeyboard = [
+  [{ text: 'eto set'}],
+  ];
+
 const clientKeyboard = [
   [{ text: strings.clientMenuOptions.postNewJob }],
   [{ text: strings.clientMenuOptions.back },
@@ -336,4 +340,5 @@ module.exports = {
   editInline,
   editMessage,
   hideKeyboard,
+  dopolnitkeyboard,
 };
