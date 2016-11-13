@@ -44,7 +44,7 @@ bot.onText(/\/dsl (.+)/, function (msg, match) {
   console.log(teaa)
 
   // send back the matched "whatever" to the chat
-  bot.sendMessage(chatId, teaa, {parse_mode: '<i>italic</i>'});
+  bot.sendMessage(chatId, teaa, {parse_mode: "<i>italic</i>"});
   
 });
   
