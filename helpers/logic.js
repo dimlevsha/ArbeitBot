@@ -43,6 +43,7 @@ bot.onText(/\/dsl (.+)/, function (msg, match) {
 
   // send back the matched "whatever" to the chat
   bot.sendMessage(chatId, resp);
+  return;
 });
   
   profile.textInputCheck(msg, (isTextInput, user) => {
