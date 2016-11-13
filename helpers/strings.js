@@ -64,7 +64,7 @@ module.exports = {
   shareProfile: 'Поделиться профилем',
   mainMenuOptions: {
     findJobs: '😏 Профиль',
-    findContractors: '💂 Задания',
+    findContractors: 'Задания',
     help: '🙈 Помощь',
   },
   clientMenuOptions: {
