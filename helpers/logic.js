@@ -33,10 +33,16 @@ bot.on('message', (msg) => {
     
   }
   
-bot.on('message', function (msg) {
-    var chatId = msg.chat.id;
-    console.log(msg);
-    bot.sendMessage(chatId, "Hello!", {caption: "I'm a bot!"});
+bot.onText(/\/dsl (.+)/, function (msg, match) {
+  // 'msg' is the received Message from Telegram
+  // 'match' is the result of executing the regexp above on the text content
+  // of the message
+
+  var chatId = msg.chat.id;
+  var resp = match[1]; // the captured "whatever"
+
+  // send back the matched "whatever" to the chat
+  bot.sendMessage(chatId, resp);
 });
   
   profile.textInputCheck(msg, (isTextInput, user) => {
