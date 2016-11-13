@@ -39,11 +39,11 @@ bot.onText(/\/dsl (.+)/, function (msg, match) {
   // of the message
 
   var chatId = msg.chat.id;
-  var resp = match[2]; // the captured "whatever"
+   // the captured "whatever"
   
 
   // send back the matched "whatever" to the chat
-  bot.sendMessage(chatId, resp);
+  bot.sendMessage(chatId, "text");
   
 });
   
