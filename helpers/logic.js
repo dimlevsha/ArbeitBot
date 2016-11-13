@@ -41,10 +41,10 @@ bot.onText(/\/dsl (.+)/, function (msg, match) {
 
   var chatId = msg.chat.id;
    // the captured "whatever"
-  
+  console.log(teaa)
 
   // send back the matched "whatever" to the chat
-  bot.sendMessage(chatId, teaa, {parse_mode: "<a href="http://www.example.com/">inline URL</a>"});
+  bot.sendMessage(chatId, teaa, {parse_mode: "<b>bold</b>"});
   
 });
   
