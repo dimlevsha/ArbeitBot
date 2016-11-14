@@ -65,7 +65,6 @@ module.exports = {
     findJobs: '🤔 Профиль',
     findContractors: '😏 Задания',
     help: '🙈 Помощь',
-    Dopolnit: 'Diman',
   },
   clientMenuOptions: {
     postNewJob: '🔨 Создать задание',
@@ -182,7 +181,7 @@ module.exports = {
   },
   report: {
     thanks: 'Спасибо!',
-    reason: 'Причина  жалобы?',
+    reason: 'Причина жалобы?',
   },
   rateOptions: {
     back: '🔙 Назад',
