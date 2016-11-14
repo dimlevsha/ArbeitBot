@@ -169,9 +169,9 @@ module.exports = {
     byFreelancer: 'byFl',
   },
   freelancerOptions: {
-    interested: '1',
-    notInterested: 'Not interested',
-    report: '❗️ Report',
+    interested: 'Интересно',
+    notInterested: 'Не интересно',
+    report: '❗️ Пожаловаться',
   },
   freelancerAcceptOptions: {
     accept: '✅ Accept',
