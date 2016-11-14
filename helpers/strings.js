@@ -4,7 +4,7 @@
  * @module helpers/strings
  * @license MIT
  */
-const WTF = 'Report'
+
 module.exports = {
   anotherJobDraftErrorMessage: 'You are already entering description for another job draft. Please either cancel the currently active job draft or provide us with the job description for the currently active job draft.',
   reportThankYouMessage: 'Спасибо за то, что сообщили нам о нарушении! Наши модераторы немедленно рассотрят вашу заявку и предпримут все необходимое.',
@@ -88,7 +88,7 @@ module.exports = {
     '0₽ – 50₽', '50₽ – 250₽', '250₽ – 500₽',
     '500₽ – 1000₽', '1000₽ – 5000₽',
   ],
-  hourlyRateAllRatesOption: 'All hourly rates',
+ hourlyRateAllRatesOption: 'Отправить всем',
   selectedCategory: '✅ ',
   selectedHourlyRate: '✅ ',
   selectedLanguage: '✅ ',
@@ -132,12 +132,12 @@ module.exports = {
   cancel: '❌ Отменить',
   jobCreateCancel: '❌ Отменить',
   selectFreelancerCancel: '❌ Отменить',
-  jobSendAllFreelancers: 'Отправить всем',
-  jobRefresh: 'Обновить',
-  jobDelete: 'Удалить',
+  jobSendAllFreelancers: 'Send to all',
+  jobRefresh: 'Refresh',
+  jobDelete: 'Delete',
   jobEdit: 'Edit',
-  jobSelectFreelancer: 'Выбрать исполнителя',
-  jobSelectAnotherFreelancer: 'Выбрать другого исполнителя',
+  jobSelectFreelancer: 'Select contractor',
+  jobSelectAnotherFreelancer: 'Select another contractor',
   jobBackPage: '<',
   jobNextPage: '>',
   interestedOption: '✅',
@@ -148,7 +148,7 @@ module.exports = {
   star: '⭐',
   bioReviews: 'Reviews:',
   saveReviewOption: 'saveReview',
-adminNotifications: {
+  adminNotifications: {
     adminBanReviewInline: 'aBRI',
     adminDeleteReviewInline: 'aDRI',
     adminOkReviewInline: 'aORI',
@@ -177,7 +177,6 @@ adminNotifications: {
     accept: '✅ Принять',
     refuse: '❌ Отказаться',
   },
-  
   jobFinishedOptions: {
     rate: '⭐ Rate',
     report: '❗️ Report',
@@ -187,7 +186,7 @@ adminNotifications: {
     reason: 'What is the report reason?',
   },
   rateOptions: {
-    back: '🔙 Назад',
+    back: '🔙 Back',
     oneStar: '⭐',
     twoStars: '⭐⭐',
     threeStars: '⭐⭐⭐',
