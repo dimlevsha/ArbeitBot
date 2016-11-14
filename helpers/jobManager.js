@@ -280,24 +280,9 @@ eventEmitter.on(strings.inputLanguageInline, ({ bot, msg, user }) => {
       draftCopy.language = language;
       return draftCopy.save()
         .then((savedDraft) => {
-          askForNewJobSupercategory(bot, msg, user, savedDraft);
+          askForNewJobCategory(bot, msg, user, savedDraft);
         });
     })
-    .catch(/** todo: handle error */);
-});
-
-eventEmitter.on(strings.inputSupercategoryNameInline, ({ bot, msg, user }) => {
-  const options = msg.data.split(strings.inlineSeparator);
-  const supercategoryId = options[1];
-  const jobId = options[2];
-
-  dbmanager.findJobById(jobId, 'language')
-    .then(job =>
-      dbmanager.getSupercategoryById(supercategoryId, job.language)
-        .then((supercategory) => {
-          askForNewJobCategory(bot, msg, user, job, supercategory);
-        })
-    )
     .catch(/** todo: handle error */);
 });
 
@@ -690,67 +675,29 @@ function askForNewJobLanguage(bot, msg, draft) {
  * @param {Mongoose:User} user Owner of the job
  * @param {Mongoose:Job} job Job draft
  */
-function askForNewJobSupercategory(bot, msg, user, job) {
-  dbmanager.getSupercategories(job.language)
-    .then((supercategories) => {
-      const categoryButtons = supercategories
-        .filter((supercategory) => {
-          let count = 0;
-          supercategory.categories.forEach((category) => {
-            count += category.freelancers.length -
-              (category.freelancers.find(f => f.id === user.id) ? 1 : 0);
-          });
-          return count > 0;
-        })
-        .map((supercategory) => {
-          let count = 0;
-          supercategory.categories.forEach((category) => {
-            count += category.freelancers.length -
-              (category.freelancers.find(f => f.id === user.id) ? 1 : 0);
-          });
-          return [{
-            text: `${supercategory.title} [${count}]`,
-            callback_data: `${strings.inputSupercategoryNameInline}${strings.inlineSeparator}${supercategory._id}${strings.inlineSeparator}${job._id}`,
-          }];
-        });
-      categoryButtons.unshift([{ text: strings.jobCreateCancel, callback_data: `${strings.cancelJobCreationInline}${strings.inlineSeparator}${job._id}` }]);
+function askForNewJobCategory(bot, msg, user, job) {
+  dbmanager.getCategories(job.language)
+  .then((categories) => {
+    const categoryButtons = categories
+    .filter(category =>
+            category.freelancers.length - (category.freelancers
+                                           .find(f => f.id === user.id) ? 1 : 0) > 0
+            )
+    .map(category =>
+         [{
+          text: `${category.title} [${(category.freelancers.length - (category.freelancers.find(f => f.id === user.id) ? 1 : 0))}]`,
+           callback_data: `${strings.inputCategoryNameInline}${strings.inlineSeparator}${category._id}${strings.inlineSeparator}${job._id}`,
+            }]
+         );
+
+categoryButtons.unshift([{ text: strings.jobCreateCancel, callback_data: `${strings.cancelJobCreationInline}${strings.inlineSeparator}${job._id}` }]);
       keyboards.editMessage(bot,
         job.current_inline_chat_id,
         job.current_inline_message_id,
-        strings.selectSupercategoryMessage,
+        strings.selectCategoryMessage,
         categoryButtons);
     })
     .catch(/** todo: handle error */);
-}
-
-/**
- * Sends message asking for job category of job that is being created, saves
- * @param {Telegram:Bot} bot Bot that should respond
- * @param {Telegram:Message} msg Message received
- * @param {Mongoose:User} user Owner of the job
- * @param {Mongoose:Job} job Job draft
- * @param {Mongoose:Supercategory} supercategory Supercategory choosen
- */
-function askForNewJobCategory(bot, msg, user, job, supercategory) {
-  const categories = supercategory.categories;
-
-  const categoryButtons = categories
-    .filter(category =>
-      category.freelancers.length - (category.freelancers
-        .find(f => f.id === user.id) ? 1 : 0) > 0
-    )
-    .map(category =>
-      [{
-        text: `${category.title} [${(category.freelancers.length - (category.freelancers.find(f => f.id === user.id) ? 1 : 0))}]`,
-        callback_data: `${strings.inputCategoryNameInline}${strings.inlineSeparator}${category._id}${strings.inlineSeparator}${job._id}`,
-      }]
-    );
-  categoryButtons.unshift([{ text: strings.jobCreateCancel, callback_data: `${strings.cancelJobCreationInline}${strings.inlineSeparator}${job._id}` }]);
-  keyboards.editMessage(bot,
-    job.current_inline_chat_id,
-    job.current_inline_message_id,
-    strings.selectCategoryMessage,
-    categoryButtons);
 }
 
 /**
