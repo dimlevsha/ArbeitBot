@@ -170,8 +170,8 @@ module.exports = {
   },
   freelancerOptions: {
     interested: 'Интересно',
-    notInterested: 'Не интересно',
-    report: '❗️ Пожаловаться',
+    notInterested: 'Not interested',
+    report: '❗️ Report',
   },
   freelancerAcceptOptions: {
     accept: '✅ Accept',
