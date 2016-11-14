@@ -4,7 +4,7 @@
  * @module helpers/strings
  * @license MIT
  */
-var davay = new Option("Пожаловаться", 'Report');
+
 
 module.exports = {
   anotherJobDraftErrorMessage: 'You are already entering description for another job draft. Please either cancel the currently active job draft or provide us with the job description for the currently active job draft.',
@@ -172,7 +172,7 @@ module.exports = {
   freelancerOptions: {
     interested: 'Интересно',
     notInterested: 'Не интересно',
-    report: '❗️ davay',
+    report: '❗️ Report',
   },
   freelancerAcceptOptions: {
     accept: '✅ Принять',
