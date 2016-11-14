@@ -169,7 +169,7 @@ module.exports = {
     byFreelancer: 'byFl',
   },
   freelancerOptions: {
-    interested: 'Interested',
+    interested: '1',
     notInterested: 'Not interested',
     report: '❗️ Report',
   },
