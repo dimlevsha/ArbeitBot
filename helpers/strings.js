@@ -186,7 +186,7 @@ module.exports = {
     reason: 'What is the report reason?',
   },
   rateOptions: {
-    back: '🔙 Back',
+    back: '🔙 Назад',
     oneStar: '⭐',
     twoStars: '⭐⭐',
     threeStars: '⭐⭐⭐',
