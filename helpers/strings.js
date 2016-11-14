@@ -132,7 +132,7 @@ module.exports = {
   cancel: '❌ Отменить',
   jobCreateCancel: '❌ Отменить',
   selectFreelancerCancel: '❌ Отменить',
-  jobSendAllFreelancers: 'ОТправить всем',
+  jobSendAllFreelancers: 'Отправить всем',
   jobRefresh: 'Обновить',
   jobDelete: 'Удалить',
   jobEdit: 'Редактировать',
