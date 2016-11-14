@@ -133,11 +133,11 @@ module.exports = {
   jobCreateCancel: '❌ Отменить',
   selectFreelancerCancel: '❌ Отменить',
   jobSendAllFreelancers: 'Отправить всем',
-  jobRefresh: 'Refresh',
-  jobDelete: 'Delete',
+  jobRefresh: 'Обновить',
+  jobDelete: 'Удалить',
   jobEdit: 'Edit',
-  jobSelectFreelancer: 'Select contractor',
-  jobSelectAnotherFreelancer: 'Select another contractor',
+  jobSelectFreelancer: 'Выбрать исполнителя',
+  jobSelectAnotherFreelancer: 'Выбрать другого исполнителя',
   jobBackPage: '<',
   jobNextPage: '>',
   interestedOption: '✅',
@@ -179,7 +179,7 @@ adminNotifications: {
   },
   
   jobFinishedOptions: {
-    rate: '⭐ Rate',
+    rate: '⭐ Оценить',
     report: '❗️ Report',
   },
   report: {
