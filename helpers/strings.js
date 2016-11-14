@@ -7,9 +7,9 @@
 
 module.exports = {
   anotherJobDraftErrorMessage: 'You are already entering description for another job draft. Please either cancel the currently active job draft or provide us with the job description for the currently active job draft.',
-  reportThankYouMessage: 'Thank you for reporting this suspicious activity! Our moderators will take immediate action to prevent reported behaviour in the future.',
-  banMessage: 'It looks like you have been reported, and our moderators decided that there was a reason to ban you. If this is a mistake, please let my creator @borodutch know – we will see what we can do ;)',
-  loadingMessage: '🦄 Loading...',
+  reportThankYouMessage: 'Спасибо за то, что сообщили нам о нарушении! Наши модераторы немедленно рассотрят вашу заявку и предпримут все необходимое.',
+  banMessage: 'На вас подали жалобу, и наши модераторы приняли решение о вашей блокировке.  Если это ошибка, то обращайтесь к администратору @dsl1500 и мы посмотрим, что можно сделать.',
+  loadingMessage: '🦄 Загрузка...',
   askForUsername: 'It looks like you don\'t have a username. Please, set it up in Telegram settings.',
   deprecatedMessage: 'This message is deprecated, please scroll down to see the new message ⤵️',
   initialMessage: 'Добро пожаловать в JobMaker FEFU!🙌 \nНадеемся, что благодаря JM Вы сможете эффективно выполнять свои дела, а также легко зарабатывать, помогая другим.🏃👌 \n\nДля комфортного использования JM рекомендуем воспользоваться функцией смены фона в Telegram. 🌌Ответы на вопросы о работе системы Вы найдёте в графе "Помощь".💬 \n\nЖелаем удачного поиска!🔎',
