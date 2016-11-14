@@ -4,6 +4,7 @@
  * @module helpers/strings
  * @license MIT
  */
+const ❗️ = 'Rate'
 module.exports = {
   anotherJobDraftErrorMessage: 'You are already entering description for another job draft. Please either cancel the currently active job draft or provide us with the job description for the currently active job draft.',
   reportThankYouMessage: 'Спасибо за то, что сообщили нам о нарушении! Наши модераторы немедленно рассотрят вашу заявку и предпримут все необходимое.',
@@ -128,11 +129,10 @@ module.exports = {
   inputHourlyRateState: 'inputHourlyRateState',
   inputJobDescriptionState: 'inputJobDescriptionState',
   inputReportMessage: 'inputReportMessage',
-  cancel: '❌ Cancel',
-  Report: '❗️',
-  jobCreateCancel: '❌ Cancel',
-  selectFreelancerCancel: '❌ Cancel',
-  jobSendAllFreelancers: 'Send to all',
+  cancel: '❌ Отменить',
+  jobCreateCancel: '❌ Отменить',
+  selectFreelancerCancel: '❌ Отменить',
+  jobSendAllFreelancers: 'Отправить всем',
   jobRefresh: 'Refresh',
   jobDelete: 'Delete',
   jobEdit: 'Edit',
