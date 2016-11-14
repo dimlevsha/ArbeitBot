@@ -179,7 +179,7 @@ adminNotifications: {
   },
   
   jobFinishedOptions: {
-    rate: '⭐ Оценить',
+    rate: '⭐ Rate',
     report: '❗️ Report',
   },
   report: {
