@@ -8,7 +8,6 @@
 
 module.exports = {
   UserChatInline: require('./userChatInline.js'),
-  Supercategory: require('./supercategory.js'),
   Category: require('./category.js'),
   Report: require('./report.js'),
   Review: require('./review.js'),
