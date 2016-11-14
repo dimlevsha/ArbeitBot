@@ -4,7 +4,6 @@
  * @module helpers/strings
  * @license MIT
  */
-const zhaloba = 'Report';
 module.exports = {
   anotherJobDraftErrorMessage: 'You are already entering description for another job draft. Please either cancel the currently active job draft or provide us with the job description for the currently active job draft.',
   reportThankYouMessage: 'Спасибо за то, что сообщили нам о нарушении! Наши модераторы немедленно рассотрят вашу заявку и предпримут все необходимое.',
@@ -130,6 +129,7 @@ module.exports = {
   inputJobDescriptionState: 'inputJobDescriptionState',
   inputReportMessage: 'inputReportMessage',
   cancel: '❌ Cancel',
+  Report: '❗️',
   jobCreateCancel: '❌ Cancel',
   selectFreelancerCancel: '❌ Cancel',
   jobSendAllFreelancers: 'Send to all',
@@ -171,7 +171,7 @@ adminNotifications: {
   freelancerOptions: {
     interested: 'Интересно',
     notInterested: 'Не интересно',
-    report: '❗️ zhaloba',
+    report: '❗️ Пожаловаться',
   },
   freelancerAcceptOptions: {
     accept: '✅ Принять',
