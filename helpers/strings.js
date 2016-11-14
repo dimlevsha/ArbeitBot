@@ -171,7 +171,7 @@ adminNotifications: {
   freelancerOptions: {
     interested: 'Интересно',
     notInterested: 'Не интересно',
-    report: '❗️ Report',
+    report: '❗️ davay',
   },
   freelancerAcceptOptions: {
     accept: '✅ Accept',
