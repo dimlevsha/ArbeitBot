@@ -135,7 +135,7 @@ module.exports = {
   jobSendAllFreelancers: 'Отправить всем',
   jobRefresh: 'Обновить',
   jobDelete: 'Удалить',
-  jobEdit: 'Редактировать',
+  jobEdit: 'Edit',
   jobSelectFreelancer: 'Выбрать исполнителя',
   jobSelectAnotherFreelancer: 'Выбрать другого исполнителя',
   jobBackPage: '<',
@@ -182,8 +182,8 @@ module.exports = {
     report: '❗️ Пожаловаться',
   },
   report: {
-    thanks: 'Спасибо!',
-    reason: 'Причина жалобы?',
+    thanks: 'Thanks you for your alertness!',
+    reason: 'What is the report reason?',
   },
   rateOptions: {
     back: '🔙 Назад',
