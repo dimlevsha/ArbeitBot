@@ -7,6 +7,7 @@
 
 const englishObjectId = '581d0b8db33e47e7008726bd';
 const russianObjectId = '581d0b8db33e47e7008726be';
+var Жалоба = 'Report';
 
 const english = {
   resubscribe: 'Переподписаться',
@@ -193,7 +194,7 @@ const english = {
   freelancerOptions: {
     interested: 'Interested',
     notInterested: 'Not interested',
-    report: 'Жалоба Report',
+    report: 'Жалоба',
   },
   freelancerAcceptOptions: {
     accept: '✅ Accept',
