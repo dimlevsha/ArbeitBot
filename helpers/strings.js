@@ -158,7 +158,7 @@ const english = {
   jobRefresh: 'Обновить',
   jobDelete: 'Удалить',
   jobEdit: 'Edit',
-  jobSelectFreelancer: 'Выбрать',
+  jobSelectFreelancer: 'Выбрать исполнителя',
   jobSelectAnotherFreelancer: 'Выбрать другого исполнителя',
   jobBackPage: '<',
   jobNextPage: '>',
