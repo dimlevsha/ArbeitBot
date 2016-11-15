@@ -10,7 +10,7 @@ const keyboards = require('./keyboards');
 const strings = require('./strings');
 
 global.eventEmitter.on(strings().inputBioState, ({ msg, user, bot }) => {
-  if (msg.text.length > 150) {
+  if (msg.text.length > 300) {
     bot.sendMessage(msg.chat.id, strings().bioErrorMessage);
     return;
   }
@@ -19,7 +19,7 @@ global.eventEmitter.on(strings().inputBioState, ({ msg, user, bot }) => {
     user.hourly_rate &&
     user.categories.length > 0
     && user.languages.length > 0;
-  const newBio = msg.text.substring(0, 150);
+  const newBio = msg.text.substring(0, 300);
   const userCopy = Object.create(user);
   userCopy.bio = newBio;
   userCopy.input_state = undefined;
