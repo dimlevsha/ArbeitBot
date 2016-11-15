@@ -8,6 +8,7 @@
 const englishObjectId = '581d0b8db33e47e7008726bd';
 const russianObjectId = '581d0b8db33e47e7008726be';
 var Жалоба = 'Report';
+var Выбрать = 'Select contractor';
 
 const english = {
   resubscribe: 'Переподписаться',
@@ -157,7 +158,7 @@ const english = {
   jobRefresh: 'Обновить',
   jobDelete: 'Удалить',
   jobEdit: 'Edit',
-  jobSelectFreelancer: 'Select contractor',
+  jobSelectFreelancer: 'Выбрать исполнителя',
   jobSelectAnotherFreelancer: 'Выбрать другого исполнителя',
   jobBackPage: '<',
   jobNextPage: '>',
