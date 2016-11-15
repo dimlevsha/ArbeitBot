@@ -32,11 +32,11 @@ const clientKeyboard = [
 ];
 
 const helpKeyboard = [
-  [{ text: '@arbeit_bot on GitHub', url: 'https://github.com/arbeitbot/arbeitbot' }],
+  [{ text: 'Благодарим за код', url: 'https://github.com/arbeitbot/arbeitbot' }],
 ];
 
 const arbeitbotSupportKeyboard = [
-  [{ text: 'Contact support', url: 'https://telegram.me/arbeit_bot_support' }],
+  [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
 ];
 
 /** Functions */
