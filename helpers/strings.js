@@ -137,7 +137,7 @@ module.exports = {
   jobRefresh: 'Refresh',
   jobDelete: 'Delete',
   jobEdit: 'Edit',
-  jobSelectFreelancer: 'Select contractor',
+  jobSelectFreelancer: 'Выбрать исполнителя Select contractor',
   jobSelectAnotherFreelancer: 'Select another contractor',
   jobBackPage: '<',
   jobNextPage: '>',
