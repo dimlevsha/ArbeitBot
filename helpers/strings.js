@@ -101,7 +101,7 @@ const english = {
   },
   hourlyRateOptions: [
     '0р – 50р', '0р – 250р', '0р – 500р',
-    '0р – 1000р', '0р – 5000р',
+    '0р – 1000р', '0р – 5000р', '0р - 100000'
   ],
   hourlyRateAllRatesOption: 'Отправить всем',
   selectedCategory: '✅ ',
