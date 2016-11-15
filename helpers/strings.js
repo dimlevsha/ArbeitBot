@@ -74,8 +74,8 @@ module.exports = {
     back: '🔙 Назад',
   },
   freelanceMenuOptions: {
-    editBio: '🖊 О себе',
-    addBio: '🖊 О себе',
+    editBio: '😎 О себе',
+    addBio: '😎 О себе',
     editCategories: '📌 Категории',
     addCategories: '📌 Категории',
     editHourlyRate: '💲 Оплата',
