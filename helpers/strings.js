@@ -193,7 +193,7 @@ const english = {
   freelancerOptions: {
     interested: 'Interested',
     notInterested: 'Not interested',
-    report: '❗️ Report',
+    report: 'Жалоба Report',
   },
   freelancerAcceptOptions: {
     accept: '✅ Accept',
@@ -201,7 +201,7 @@ const english = {
   },
   jobFinishedOptions: {
     rate: '⭐ Rate',
-    report: '❗️ Report Жалоба',
+    report: '❗️ Report',
   },
   report: {
     thanks: 'Thanks you for your alertness!',
