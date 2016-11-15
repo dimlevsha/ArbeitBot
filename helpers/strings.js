@@ -61,7 +61,7 @@ module.exports = {
   clientHasChosenAnotherFreelancer: 'Заказчик выбрал другого исполнителя',
   noCandidatesMessage: 'К сожалению, на данный момент нет доступных исполнителей 😥 Пожалуйста, cпроверьте позже или создайте новое задание.',
   thisWorkIsRemoved: 'Задание было удалено ✌️',
-  thisDraftIsRemoved: 'Вы не создали задание ✌️',
+  thisDraftIsRemoved: 'Вы не создали задание 😔',
   shareProfile: 'Share profile',
   mainMenuOptions: {
     findJobs: '😏 Профиль',
@@ -133,7 +133,7 @@ module.exports = {
   cancel: '❌ Отменить',
   jobCreateCancel: '❌ Отменить',
   selectFreelancerCancel: '❌ Отменить',
-  jobSendAllFreelancers: 'Send to all',
+  jobSendAllFreelancers: '🔎 Send to all',
   jobRefresh: 'Refresh',
   jobDelete: 'Delete',
   jobEdit: 'Edit',
