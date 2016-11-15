@@ -80,7 +80,7 @@ const english = {
   },
   clientMenuOptions: {
     postNewJob: '🔨 Создать задание',
-    myJobs: '🛠 🛠 Мои задания',
+    myJobs: '🛠 Мои задания',
     back: '🔙 Назад',
   },
   changeTo: 'Сменить на: ',
