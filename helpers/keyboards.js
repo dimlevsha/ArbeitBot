@@ -35,9 +35,6 @@ const helpKeyboard = [
   [{ text: 'Благодарим за код', url: 'https://github.com/arbeitbot/arbeitbot' }],
 ];
 
-const moykeyba = [
-  [{ text: 'Ха', url: 'https://google.com/' }],
-];
 
 const arbeitbotSupportKeyboard = [
   [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
@@ -249,8 +246,7 @@ function sendHelp(bot, chatId) {
     bot,
     chatId,
     strings().helpMessage,
-    helpKeyboard,
-    moykeyba
+    helpKeyboard
   );
 }
 
@@ -357,7 +353,6 @@ module.exports = {
   sendClientMenu,
   sendFreelanceMenu,
   sendHelp,
-  moykeyba,
   sendKeyboard,
   sendInline,
   editInline,
