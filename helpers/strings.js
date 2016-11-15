@@ -201,7 +201,7 @@ const english = {
   },
   jobFinishedOptions: {
     rate: '⭐ Rate',
-    report: '❗️ Report',
+    report: '❗️ Report Жалоба',
   },
   report: {
     thanks: 'Thanks you for your alertness!',
