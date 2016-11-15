@@ -81,8 +81,8 @@ module.exports = {
     editHourlyRate: '💲 Оплата',
     addHourlyRate: '💲 Оплата',
     back: '🔙 Назад',
-    busy: '⚒ Занят(а)',
-    available: '✅ Свободен(а)',
+    busy: '🚷 Занят(а)',
+    available: '💃🏻 Свободен(а)',
     addLanguage: '🇷🇺 Добавить язык',
   },
   hourlyRateOptions: [
