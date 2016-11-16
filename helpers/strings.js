@@ -76,7 +76,7 @@ const english = {
   shareProfile: 'Share profile',
   mainMenuOptions: {
     findJobs: '🗿 Профиль',
-    findContractors: '🤔 Задания',
+    findContractors: '🔧 Задания',
     help: '📝 Инструкция',
     chooseLanguage: '📣 Choose language',
   },
