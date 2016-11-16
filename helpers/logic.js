@@ -60,7 +60,7 @@ bot.on('message', (msg) => {
 });
 
 
-bot.on('/как', msg => {
+bot.onText(/\/hello (.+)/, msg => {
   let fromId = msg.from.id;
   return bot.sendMessage(fromId, "Hello");
 });
