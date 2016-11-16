@@ -62,12 +62,12 @@ bot.on('message', (msg) => {
 
 bot.onText(/найти/, msg => {
   let fromId = msg.from.id;
-  return bot.sendMessage(fromId, "Как найти задание", parse_mode=HTML);
+  return bot.sendMessage(fromId, "Как найти задание");
 });
 
 bot.onText(/создать/, msg => {
   let fromId = msg.from.id;
-  return bot.sendMessage(fromId, "Как создать задание",parse_mode=HTML);
+  return bot.sendMessage(fromId, "Как создать задание");
 });
 /**
  * Fired when user clicks button on inlline keyboard
