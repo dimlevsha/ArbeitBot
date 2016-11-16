@@ -77,7 +77,7 @@ const english = {
   mainMenuOptions: {
     findJobs: '🗿 Профиль',
     findContractors: '🔧 Задания',
-    help: '📝 Инструкция',
+    help: '📝💡 Инструкция',
     chooseLanguage: '📣 Choose language',
   },
   clientMenuOptions: {
