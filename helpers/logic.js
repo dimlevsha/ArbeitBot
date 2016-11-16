@@ -31,9 +31,6 @@ bot.on('message', (msg) => {
     profile.sendAskForUsername(bot, msg);
     return;
   }
-bot.on('/hello', msg => {
-  return bot.sendMessage(msg.from.id, `Hello`);
-}
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
       if (user.ban_state) {
@@ -62,6 +59,11 @@ bot.on('/hello', msg => {
   });
 });
 
+
+
+bot.on('/hello', msg => {
+  return bot.sendMessage(msg.from.id, `Hello`);
+});
 /**
  * Fired when user clicks button on inlline keyboard
  *
