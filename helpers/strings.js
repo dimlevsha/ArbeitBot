@@ -75,7 +75,7 @@ const english = {
   thisDraftIsRemoved: 'Вы не создали задание 😔',
   shareProfile: 'Share profile',
   mainMenuOptions: {
-    findJobs: '😏 Профиль',
+    findJobs: '🗿 Профиль',
     findContractors: '🤔 Задания',
     help: '📝 Инструкция',
     chooseLanguage: '📣 Choose language',
