@@ -31,6 +31,9 @@ bot.on('message', (msg) => {
     profile.sendAskForUsername(bot, msg);
     return;
   }
+  bot.on(['/как'], msg => {
+  return bot.sendMessage(msg.from.id, 'Bam!');
+}
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
       if (user.ban_state) {
