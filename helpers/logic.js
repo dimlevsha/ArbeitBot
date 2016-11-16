@@ -62,7 +62,8 @@ bot.on('message', (msg) => {
 
 bot.onText(/найти/, msg => {
   let fromId = msg.from.id;
-  return bot.sendMessage(fromId, "Как найти задание");
+  let nayti = <strong>Все что угодно</strong>;
+  return bot.sendMessage(fromId, nayti, parse_mode=html);
 });
 
 bot.onText(/создать/, msg => {
