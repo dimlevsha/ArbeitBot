@@ -32,9 +32,8 @@ bot.on('message', (msg) => {
     return;
   }
 bot.on('/hello', msg => {
-  let [cmdName, firstName, lastName] = msg.text.split(' ');
-  return bot.sendMessage(msg.from.id, `Hello, ${ firstName } ${ lastName }!`);
-});
+  return bot.sendMessage(msg.from.id, `Hello`);
+}
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
       if (user.ban_state) {
