@@ -95,8 +95,8 @@ const english = {
     editHourlyRate: '💲 Оплата',
     addHourlyRate: '💲 Оплата',
     back: '🔙 Назад',
-    busy: '⚒ Заняты',
-    available: '✅ Доступны',
+    busy: '🚷 Заняты',
+    available: '💃 Доступны',
     addLanguage: '🇺🇸 Добавить язык',
   },
   hourlyRateOptions: [
