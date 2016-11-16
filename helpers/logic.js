@@ -63,7 +63,7 @@ bot.on('message', (msg) => {
 bot.onText(/найти/, msg => {
   let fromId = msg.from.id;
   let nayti = <strong>Все что угодно</strong>;
-  return bot.sendMessage(fromId, nayti, parse_mode=html);
+  return bot.sendMessage(fromId, nayti, html);
 });
 
 bot.onText(/создать/, msg => {
