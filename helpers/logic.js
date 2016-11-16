@@ -60,11 +60,15 @@ bot.on('message', (msg) => {
 });
 
 
-bot.onText(/как/, msg => {
+bot.onText(/найти/, msg => {
   let fromId = msg.from.id;
-  return bot.sendMessage(fromId, "Hello");
+  return bot.sendMessage(fromId, "<strong>Как найти задание</strong>", parse_mode=HTML);
 });
 
+bot.onText(/создать/, msg => {
+  let fromId = msg.from.id;
+  return bot.sendMessage(fromId, "<strong>Как создать задание</strong>",parse_mode=HTML);
+});
 /**
  * Fired when user clicks button on inlline keyboard
  *
