@@ -77,12 +77,12 @@ const english = {
   mainMenuOptions: {
     findJobs: '🗿 Профиль',
     findContractors: '🔧 Задания',
-    help: '📝💡 Инструкция',
+    help: '💡 Инструкция',
     chooseLanguage: '📣 Choose language',
   },
   clientMenuOptions: {
     postNewJob: '🔨 Создать задание',
-    myJobs: '🛠 Мои задания',
+    myJobs: '📱 Мои задания',
     back: '🔙 Назад',
   },
   changeTo: 'Сменить на: ',
