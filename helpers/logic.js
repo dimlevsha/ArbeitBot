@@ -60,10 +60,11 @@ bot.on('message', (msg) => {
 });
 
 
-
-bot.on('/hello', msg => {
-  return bot.sendMessage(msg.from.id, `Hello`);
+bot.on('text', msg => {
+  let fromId = msg.from.id;
+  return bot.sendMessage(fromId, "Hello");
 });
+
 /**
  * Fired when user clicks button on inlline keyboard
  *
