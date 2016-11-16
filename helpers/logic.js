@@ -31,9 +31,9 @@ bot.on('message', (msg) => {
     profile.sendAskForUsername(bot, msg);
     return;
   }
-bot.onText('/как', msg => {
-  let hid = msg.from.id;
-  return bot.sendMessage(hid, `You said:`);
+bot.on('/hello', msg => {
+  let [cmdName, firstName, lastName] = msg.text.split(' ');
+  return bot.sendMessage(msg.from.id, `Hello, ${ firstName } ${ lastName }!`);
 });
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
