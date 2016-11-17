@@ -94,6 +94,17 @@ if (callbackQuery.data === 'pravila_inst'){
    };
  
    bot.editMessageText('Правила:⛔', options);}
+  else if (callbackQuery.data === 'kaknaitizadanie'){
+
+  let action = callbackQuery.data;
+ let chatId = callbackQuery.message.chat.id
+   var options = {
+     chat_id: callbackQuery.message.chat.id,
+     message_id: callbackQuery.message.message_id,
+     reply_markup: keyboards.sendinstr(bot, chatId)
+   };
+ 
+   bot.editMessageText('Как найти задание?', options);}
  }); 
 
 
