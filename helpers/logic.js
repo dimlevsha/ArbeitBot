@@ -160,8 +160,6 @@ function handleKeyboard(msg) {
     languagePicker.sendLanguagePicker(bot, msg.chat.id);
   } else if (text === freelanceMenuOptions.back) {
     keyboards.sendMainMenu(bot, msg.chat.id);
-  } else if (text === 'Правила') {
-    bot.sendMessage(msg.from.id, 'ДАААА');
   }
 }
 
