@@ -53,6 +53,21 @@ const dabl = [
  * @param {Mongoose:User} user - User object that should receive keyboard
  * @return {Telegram:Keyboard} Keyboard - ready to be shown to user
  */
+
+function senddabl(bot, chatId) {
+  sendInline(
+    bot,
+    chatId,
+    strings().helpMessage,
+    dabl
+  );
+}
+
+bot.onText('message', msg => {
+   return bot.sendMessage(msg.from.id, 'hey', senddabl);
+});
+
+
 function freelancerKeyboard(user) {
   const bioText = ((user.bio) ?
     strings().freelanceMenuOptions.editBio :
@@ -252,18 +267,6 @@ function sendHelp(bot, chatId) {
     helpKeyboard
   );
 }
-
-function senddabl(bot, chatId) {
-  sendInline(
-    bot,
-    chatId,
-    strings().helpMessage,
-    dabl
-  );
-}
-
-
-
 
 /**
  * Sends keyboard to user
