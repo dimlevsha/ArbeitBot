@@ -74,7 +74,7 @@ bot.onText(/создать/, msg => {
   return bot.sendMessage(fromId, sozdat);
 });
 
-bot.onText(/vot/, msg => {
+bot.onText('найн', msg => {
    let chatId = msg.from.id;
   let messageId = msg.message_id;
   let text = 'tak sebe';
