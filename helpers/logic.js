@@ -81,7 +81,9 @@ bot.onText(/создать/, msg => {
 
 
  bot.on('message', msg => {
-   bot.sendMessage(msg.from.id, 'Ladn', knopka)
+   
+let markup = knopka
+   bot.sendMessage(msg.from.id, 'Ladn',{markup} )
  });
 /**
  * Fired when user clicks button on inlline keyboard
