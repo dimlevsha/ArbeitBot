@@ -71,10 +71,51 @@ bot.onText(/создать/, msg => {
   let sozdat = 'Если вы хотите создавать задания, то следуйте этой инструкции, а также подсказкам на экране:\n   1)Вам необходимо заполнить свой "Профиль", выбрав соответствующую опцию в главном меню.\n   2)Выбрать опцию "Задания" ➡️ "Создать задание" в главном меню.\n    3)Выбрать язык, категорию задания, а также примерную цену, которую вы готовы предложить за его выполнение. После напишите ваше задание.\n    4)Теперь вы можете видеть список людей, доступных для выполнения задания. Вы можете выбрать конкретного человека или отправить предложение сразу всем. Также вы можете удалить ваше задание.\n    5)Как только кто-либо из людей, которым вы отправили предложение заинтересовался, вы можете выбрать того, кто выполнит ваше задание. Для этого используйте кнопку "Назначить".\n    6)Если исполнитель принял ваше предложение, то вам необходимо связаться с ним лично, используя Telegram или другие доступные средства коммуникации.\n    7)После того, как работа будет выполнена, вы можете оценить исполнителя либо подать на него жалобу.'
   return bot.sendMessage(fromId, sozdat);
 });
-bot.onText(/hi/, msg => {
+
+// On commands
+bot.on(['/start', '/back'], msg => {
+  
+  let markup = bot.keyboard([
+    ['/buttons', '/inlineKeyboard'],
+    ['/start','/hide']
+  ], { resize: true });
+  
+  return bot.sendMessage(msg.from.id, 'Keyboard example.', { markup });
+
+});
+
+// Buttons
+bot.on('/buttons', msg => {
+
+  let markup = bot.keyboard([
+    [bot.button('contact', 'Your contact'), bot.button('location', 'Your location')],
+    ['/back', '/hide']
+  ], { resize: true });
+
+  return bot.sendMessage(msg.from.id, 'Button example.', { markup });
+
+});
+
+// Hide keyboard
+bot.on('/hide', msg => {
+  return bot.sendMessage(
+    msg.from.id, 'Hide keyboard example. Type /back to show.', { markup: 'hide' }
+  );
+});
+
+// On location on contact message
+bot.on(['location', 'contact'], (msg, self) => {
+  return bot.sendMessage(msg.from.id, `Thank you for ${ self.type }.`);
+});
+
+// Inline buttons
+bot.on('/inlineKeyboard', msg => {
 
   let markup = bot.inlineKeyboard([
-     [
+    [
+      bot.inlineButton('callback', { callback: 'this_is_data' }),
+      bot.inlineButton('inline', { inline: 'some query' })
+    ], [
       bot.inlineButton('url', { url: 'https://telegram.org' })
     ]
   ]);
@@ -83,6 +124,28 @@ bot.onText(/hi/, msg => {
 
 });
 
+// Inline button callback
+bot.on('callbackQuery', msg => {
+  // User message alert
+  return bot.answerCallback(msg.id, `Inline button callback: ${ msg.data }`, true);
+});
+
+// Inline query
+bot.on('inlineQuery', msg => {
+
+  const query = msg.query;
+  const answers = bot.answerList(msg.id);
+
+  answers.addArticle({
+    id: 'query',
+    title: 'Inline Query',
+    description: `Your query: ${ query }`,
+    message_text: 'Click!'
+  });
+
+  return bot.answerQuery(answers);
+
+});
 /**
  * Fired when user clicks button on inlline keyboard
  *
