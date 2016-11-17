@@ -33,6 +33,7 @@ const clientKeyboard = [
 
 const helpKeyboard = [
   [{ text: 'Благодарим за код', url: 'https://github.com/arbeitbot/arbeitbot' }],
+  [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
 ];
 
 
@@ -42,10 +43,6 @@ const arbeitbotSupportKeyboard = [
 
 
 
-const dabl = [
-  [{ text: 'Та самая кнопка', url: 'https://telegram.me/dsl1500' }],
-  [{ text: 'А это вторая!!', url: 'https://telegram.me/dsl1500' }],
-];
 /** Functions */
 
 /**
@@ -57,14 +54,6 @@ const dabl = [
  * @return {Telegram:Keyboard} Keyboard - ready to be shown to user
  */
 
-function senddabl(bot, chatId) {
-  sendInline(
-    bot,
-    chatId,
-    'Хаюшки',
-    dabl
-  );
-}
 
 
 
