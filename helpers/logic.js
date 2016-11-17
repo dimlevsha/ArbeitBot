@@ -72,10 +72,6 @@ bot.onText(/создать/, msg => {
   return bot.sendMessage(fromId, sozdat);
 });
 
-bot.on('message', msg => {
-  let chatId = msg.from.id;
-   keyboards.senddabl(bot, chatId);
-});
 
 
 /**
