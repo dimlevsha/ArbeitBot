@@ -83,7 +83,7 @@ bot.onText(/правила/, msg => {
 
 
 bot.on('callback_query', function onCallbackQuery(callbackQuery) {
-
+if (callbackQuery.data === 'pravila_inst'){
 
   let action = callbackQuery.data;
  
@@ -92,7 +92,7 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
      message_id: callbackQuery.message.message_id
    };
  
-   bot.editMessageText('Edited message!', options);
+   bot.editMessageText('Edited message!', options);}
  }); 
 
 /**
