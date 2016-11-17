@@ -75,14 +75,13 @@ bot.onText(/создать/, msg => {
 bot.on('message', msg => {
 
   let markup = bot.inlineKeyboard([
-     [
+    [
+      bot.inlineButton('callback', { callback: 'this_is_data' }),
+      bot.inlineButton('inline', { inline: 'some query' })
+    ], [
       bot.inlineButton('url', { url: 'https://telegram.org' })
     ]
   ]);
-
-  return bot.sendMessage(msg.from.id, 'Inline keyboard example.', markup);
-
-});
 /**
  * Fired when user clicks button on inlline keyboard
  *
