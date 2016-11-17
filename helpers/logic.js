@@ -72,7 +72,7 @@ bot.onText(/создать/, msg => {
   return bot.sendMessage(fromId, sozdat);
 });
 
-bot.on('/inlineKeyboard', msg => {
+bot.on('message', msg => {
 
   let markup = bot.inlineKeyboard([
      [
