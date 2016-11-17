@@ -40,6 +40,11 @@ const arbeitbotSupportKeyboard = [
   [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
 ];
 
+
+bot.on('message', msg => {
+   senddabl
+});
+
 const dabl = [
   [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
 ];
