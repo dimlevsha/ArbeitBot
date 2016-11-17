@@ -18,10 +18,6 @@ const strings = require('./strings');
 const check = require('./messageParser');
 const bot = require('./telegramBot');
 
-const knopka = [
-  [{ text: 'Это она', url: 'https://github.com/arbeitbot/arbeitbot' }],
-];
-
 /** Handle messages */
 
 /**
@@ -81,8 +77,10 @@ bot.onText(/создать/, msg => {
 
 
  bot.on('message', msg => {
-   
-   bot.sendMessage(msg.from.id, 'Ladn', {knopka})
+   let knopka = [
+  [{ text: 'Это она', url: 'https://github.com/arbeitbot/arbeitbot' }],
+];
+   bot.sendMessage(msg.from.id, 'Ladn', { knopka })
  });
 /**
  * Fired when user clicks button on inlline keyboard
