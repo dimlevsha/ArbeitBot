@@ -33,6 +33,7 @@ const clientKeyboard = [
 
 const helpKeyboard = [
   [{ text: 'Правила', callback_data: 'pravila_inst' }],
+  [{ text: 'Как найти задание', callback_data: 'kaknaitizadanie' }],
    [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
   [{ text: 'Благодарим за код', url: 'https://github.com/arbeitbot/arbeitbot' }],
  
