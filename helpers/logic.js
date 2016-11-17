@@ -80,9 +80,9 @@ bot.onText(/создать/, msg => {
    let knopka = [
   [{ text: 'Это она', url: 'https://github.com/arbeitbot/arbeitbot' }],
 ];
-   bot.sendMessage(msg.from.id, 'Ladn', reply_markup=[
+   bot.sendMessage(chat_id = msg.from.id, text=  "What to do ?", reply_markup: { keyboard: [
   [{ text: 'Это она', url: 'https://github.com/arbeitbot/arbeitbot' }],
-])
+                   ] }
  });
 /**
  * Fired when user clicks button on inlline keyboard
