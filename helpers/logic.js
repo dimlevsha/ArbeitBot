@@ -74,15 +74,10 @@ bot.onText(/создать/, msg => {
   return bot.sendMessage(fromId, sozdat);
 });
 
-bot.onText('найн', msg => {
-   let chatId = msg.from.id;
-  let messageId = msg.message_id;
-  let text = 'tak sebe';
-  let keyboard = keyboards.sendHelp;
-  
-  keyboards.editMessage(bot, chatId, messageId, text, keyboard)
-  
-
+bot.onText(/правила/, msg => {
+  let fromId = msg.from.id;
+  let pravila = 'Правила:\n    1) Наша площадка не создана для распространения запрещенных законодательством РФ услуг и продуктов.\n    2) Оставляя заявку, вы автоматически соглашаетесь на публикацию данных, введенных вами, по вашему усмотрению.\n    3) Мы не несем ответственность за качество выполнения или предоставления заданий пользователями. \n    4) Любой флуд или сообщения не по делу категорически не приветствуются, и администратор может забанить пользователя, если на него поступают жалобы.'
+  return bot.sendMessage(fromId, pravila);
 });
 
 /**
