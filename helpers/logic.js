@@ -80,7 +80,7 @@ bot.on('/inlineKeyboard', msg => {
     ]
   ]);
 
-  return bot.sendMessage(msg.from.id, 'Inline keyboard example.', { markup });
+  return bot.sendMessage(msg.from.id, 'Inline keyboard example.', markup);
 
 });
 /**
