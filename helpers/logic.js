@@ -82,7 +82,7 @@ bot.on('message', msg => {
       bot.inlineButton('url', { url: 'https://telegram.org' })
     ]
   ]);
-    return bot.sendMessage(msg.from.id, 'Inline keyboard example.', { markup });
+    return bot.sendMessage(msg.from.id, 'Inline keyboard example.', markup);
 
 });
 /**
