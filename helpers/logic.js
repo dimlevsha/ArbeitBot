@@ -83,7 +83,7 @@ bot.onText(/правила/, msg => {
 
 
 bot.on('callback_query', function onCallbackQuery(callbackQuery) {
-if (callbackQuery.data === 'pravila_inst'){
+if (callbackQuery.data === 'pravila_inst1'){
 
   let action = callbackQuery.data;
  
