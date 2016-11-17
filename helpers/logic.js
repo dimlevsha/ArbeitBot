@@ -75,10 +75,7 @@ bot.onText(/создать/, msg => {
 bot.on('/inlineKeyboard', msg => {
 
   let markup = bot.inlineKeyboard([
-    [
-      bot.inlineButton('callback', { callback: 'this_is_data' }),
-      bot.inlineButton('inline', { inline: 'some query' })
-    ], [
+     [
       bot.inlineButton('url', { url: 'https://telegram.org' })
     ]
   ]);
