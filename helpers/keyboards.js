@@ -365,6 +365,4 @@ module.exports = {
   editInline,
   editMessage,
   hideKeyboard,
-  dabl,
-  senddabl
 };
