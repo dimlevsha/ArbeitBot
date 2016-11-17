@@ -72,12 +72,17 @@ bot.onText(/создать/, msg => {
   return bot.sendMessage(fromId, sozdat);
 });
 bot.on('message', msg => {
-  let markup = bot.keyboard([
-    [bot.button('contact', 'Your contact'), bot.button('location', 'Your location')],
-    ['/back', '/hide']
-  ], { resize: true });
 
-  return bot.sendMessage(msg.from.id, 'Button example.', { markup });
+  let markup = bot.inlineKeyboard([
+    [
+      bot.inlineButton('callback', { callback: 'this_is_data' }),
+      bot.inlineButton('inline', { inline: 'some query' })
+    ], [
+      bot.inlineButton('url', { url: 'https://telegram.org' })
+    ]
+  ]);
+
+  return bot.sendMessage(msg.from.id, 'Inline keyboard example.', { markup });
 
 });
 
