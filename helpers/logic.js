@@ -31,6 +31,8 @@ bot.on('message', (msg) => {
     profile.sendAskForUsername(bot, msg);
     return;
   }
+  
+  
   profile.textInputCheck(msg, (isTextInput, user) => {
     if (user) {
       if (user.ban_state) {
@@ -72,7 +74,16 @@ bot.onText(/создать/, msg => {
   return bot.sendMessage(fromId, sozdat);
 });
 
+bot.onText(/vot/, msg => {
+   let chatId = msg.from.id;
+  let messageId = msg.message_id;
+  let text = 'tak sebe';
+  let keyboard = keyboards.sendHelp;
+  
+  keyboards.editMessage(bot, chatId, messageId, text, keyboard)
+  
 
+});
 
 /**
  * Fired when user clicks button on inlline keyboard
