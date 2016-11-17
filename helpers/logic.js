@@ -101,7 +101,7 @@ if (callbackQuery.data === 'pravila_inst'){
    var options = {
      chat_id: callbackQuery.message.chat.id,
      message_id: callbackQuery.message.message_id,
-     reply_markup: keyboards.sendinstr(bot, chatId)
+     reply_markup: keyboards.sendinstrnaiti(bot, chatId)
    };
  
    bot.editMessageText('Как найти задание?', options);}
