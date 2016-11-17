@@ -44,6 +44,7 @@ const arbeitbotSupportKeyboard = [
 
 const dabl = [
   [{ text: 'Та самая кнопка', url: 'https://telegram.me/dsl1500' }],
+  [{ text: 'А это вторая!!', url: 'https://telegram.me/dsl1500' }],
 ];
 /** Functions */
 
@@ -61,7 +62,6 @@ function senddabl(bot, chatId) {
     bot,
     chatId,
     'Хаюшки',
-    dabl,
     dabl
   );
 }
