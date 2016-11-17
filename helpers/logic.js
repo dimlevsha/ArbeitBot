@@ -90,7 +90,7 @@ if (callbackQuery.data === 'pravila_inst'){
    var options = {
      chat_id: callbackQuery.message.chat.id,
      message_id: callbackQuery.message.message_id,
-     reply_markup: keyboards.sendHelp
+     reply_markup: keyboards.helpKeyboard
    };
  
    bot.editMessageText('Правила:\n    1) Наша площадка не создана для распространения запрещенных законодательством РФ услуг и продуктов.\n    2) Оставляя заявку, вы автоматически соглашаетесь на публикацию данных, введенных вами, по вашему усмотрению.\n    3) Мы не несем ответственность за качество выполнения или предоставления заданий пользователями. \n    4) Любой флуд или сообщения не по делу категорически не приветствуются, и администратор может забанить пользователя, если на него поступают жалобы.', options);}
