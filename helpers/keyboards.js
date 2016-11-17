@@ -44,9 +44,11 @@ const arbeitbotSupportKeyboard = [
 ];
 
 function sendinstr(bot, chatId) {
+  let herase = 'fasad';
   sendInline(
     bot,
     chatId,
+    herase,
     helpKeyboard
   );
 }
