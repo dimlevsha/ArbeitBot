@@ -82,7 +82,18 @@ bot.onText(/правила/, msg => {
 
 
 
+bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
+
+  let action = callbackQuery.data;
+ 
+   var options = {
+     chat_id: callbackQuery.message.chat.id,
+     message_id: callbackQuery.message.message_id
+   };
+ 
+   bot.editMessageText('Edited message!', options);
+ }); 
 
 /**
  * Fired when user clicks button on inlline keyboard
@@ -108,6 +119,9 @@ bot.on('callback_query', (msg) => {
     })
     .catch(/** todo: handle error */);
 });
+
+
+
 
 bot.on('inline_query', (msg) => {
   dbmanager.findUser({ id: msg.from.id })
