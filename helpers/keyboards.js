@@ -32,9 +32,6 @@ const clientKeyboard = [
 ];
 
 const helpKeyboard = [
-  [{ text: 'Правила'}],
-   [{ text: 'Как выполнять задания'}],
-   [{ text: 'Как создавать задания'}],
    [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
   [{ text: 'Благодарим за код', url: 'https://github.com/arbeitbot/arbeitbot' }],
  
