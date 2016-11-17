@@ -18,6 +18,10 @@ const strings = require('./strings');
 const check = require('./messageParser');
 const bot = require('./telegramBot');
 
+const knopka = [
+  [{ text: 'Это она', url: 'https://github.com/arbeitbot/arbeitbot' }],
+];
+
 /** Handle messages */
 
 /**
@@ -72,19 +76,13 @@ bot.onText(/создать/, msg => {
   return bot.sendMessage(fromId, sozdat);
 });
 
-bot.on('message', msg => {
 
-  let markup = bot.inlineKeyboard([
-    [
-      bot.inlineButton('callback', { callback: 'this_is_data' }),
-      bot.inlineButton('inline', { inline: 'some query' })
-    ], [
-      bot.inlineButton('url', { url: 'https://telegram.org' })
-    ]
-  ]);
-    return bot.sendMessage(msg.from.id, 'Inline keyboard example.', markup);
 
-});
+
+
+ bot.on('message', msg => {
+   bot.sendMessage(msg.from.id, 'Ladn', knopka)
+ });
 /**
  * Fired when user clicks button on inlline keyboard
  *
