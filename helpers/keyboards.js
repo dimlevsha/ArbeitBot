@@ -32,6 +32,7 @@ const clientKeyboard = [
 ];
 
 const helpKeyboard = [
+  [{ text: 'Связаться с администратором', callback_data: 'my_action_fancy_action' }],
    [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
   [{ text: 'Благодарим за код', url: 'https://github.com/arbeitbot/arbeitbot' }],
  
