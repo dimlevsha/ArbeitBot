@@ -42,7 +42,7 @@ const arbeitbotSupportKeyboard = [
 
 
 bot.on('message', msg => {
-   senddabl(bot, msg.from.id);
+   senddabl(bot, chatId);
 });
 
 const dabl = [
