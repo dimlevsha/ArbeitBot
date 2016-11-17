@@ -77,13 +77,18 @@ bot.onText(/создать/, msg => {
 
 
  bot.on('message', msg => {
-   let knopka = [
-  [{ text: 'Это она', url: 'https://github.com/arbeitbot/arbeitbot' }],
-];
-   bot.sendMessage(chat_id = msg.from.id, text=  "What to do ?", reply_markup: { keyboard: [
-  [{ text: 'Это она', url: 'https://github.com/arbeitbot/arbeitbot' }],
-                   ] }
+   var kb = {
+        keyboard: [
+            ['one'],
+            ['two', 'three'],
+            ['four', 'five', 'six']
+        ],
+        one_time_keyboard: true
+    };
+   bot.sendMessage(msg.from.id,"What to do ?", kb);
  });
+   
+ 
 /**
  * Fired when user clicks button on inlline keyboard
  *
