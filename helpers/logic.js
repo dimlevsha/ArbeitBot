@@ -93,7 +93,7 @@ if (callbackQuery.data === 'pravila_inst'){
      reply_markup: keyboards.sendinstr(bot, chatId)
    };
  
-   bot.editMessageText('Правила', options);}
+   bot.editMessageText('Правила:⛔', options);}
  }); 
 
 
