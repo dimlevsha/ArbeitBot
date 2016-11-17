@@ -41,9 +41,6 @@ const arbeitbotSupportKeyboard = [
 ];
 
 
-bot.on('message', msg => {
-   sendhelp(bot, chatId);
-});
 
 const dabl = [
   [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
