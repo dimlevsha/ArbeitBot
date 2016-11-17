@@ -61,6 +61,7 @@ function senddabl(bot, chatId) {
     bot,
     chatId,
     'Хаюшки',
+    dabl,
     dabl
   );
 }
