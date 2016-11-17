@@ -43,6 +43,13 @@ const arbeitbotSupportKeyboard = [
   [{ text: 'Связаться с администратором', url: 'https://telegram.me/dsl1500' }],
 ];
 
+function sendinstr(bot, chatId) {
+  sendInline(
+    bot,
+    chatId,
+    helpKeyboard
+  );
+}
 
 
 /** Functions */
@@ -367,4 +374,5 @@ module.exports = {
   editInline,
   editMessage,
   hideKeyboard,
+  sendinstr,
 };
