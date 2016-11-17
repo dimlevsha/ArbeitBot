@@ -137,7 +137,7 @@ function handleKeyboard(msg) {
   } else if (text === mainMenuOptions.findContractors) {
     keyboards.sendClientMenu(bot, msg.chat.id);
   } else if (text === mainMenuOptions.help) {
-    keyboards.sendHelp(bot, msg.chat.id);
+    keyboards.senddabl(bot, msg.chat.id);    
   } else if (text === mainMenuOptions.chooseLanguage) {
     languagePicker.sendInterfaceLanguagePicker(bot, msg.chat.id);
   } else if (text === clientOptions.postNewJob) {
