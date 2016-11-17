@@ -63,9 +63,6 @@ function senddabl(bot, chatId) {
   );
 }
 
-bot.onText('message', msg => {
-   return bot.sendMessage(msg.from.id, 'hey', senddabl);
-});
 
 
 function freelancerKeyboard(user) {
@@ -376,4 +373,6 @@ module.exports = {
   editInline,
   editMessage,
   hideKeyboard,
+  dabl,
+  senddabl
 };
