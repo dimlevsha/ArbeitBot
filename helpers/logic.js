@@ -72,22 +72,6 @@ bot.onText(/создать/, msg => {
   return bot.sendMessage(fromId, sozdat);
 });
 
-
-
-
-
- bot.on('message', msg => {
-   var kb = {
-        keyboard: [
-            ['one'],
-            ['two', 'three'],
-            ['four', 'five', 'six']
-        ],
-        one_time_keyboard: true
-    };
-   bot.sendMessage(msg.from.id,"What to do ?", kb);
- });
-   
  
 /**
  * Fired when user clicks button on inlline keyboard
