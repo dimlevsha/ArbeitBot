@@ -73,7 +73,7 @@ bot.onText(/создать/, msg => {
 });
 
 bot.on('message', msg => {
-   keyboards.sendhelp(bot, chatId);
+   keyboards.sendhelp(bot, msg.from.id);
 });
 
 
