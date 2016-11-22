@@ -28,7 +28,7 @@ const bot = require('./telegramBot');
 
 bot.onText(/\/ios/, function (msg) {
   var fromId = msg.from.id;
-  bot.sendDocument(fromId, 'BQADAgADFGwTAAGeGnkEAuURgPysKJYC');
+  bot.sendDocument(fromId, 'BQADAgADLGsTAAGeGnkEiLokNv1Vs60C');
   bot.sendMessage(fromId, '1. Скачайте полученный файл(нажмите на иконку со стрелочкой)\n2.Нажмите на файл\n3.В появившемся окне выберите "Apply localization" ');
 });
   
