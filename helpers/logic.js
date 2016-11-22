@@ -25,6 +25,15 @@ const bot = require('./telegramBot');
  *
  * @param {Telegram:Message} msg - Message received by bot
  */
+
+bot.onText(/\/ios/, function (msg) {
+  var fromId = msg.from.id;
+  bot.sendDocument(fromId, 'BQADAgADLGsTAAGeGnkEiLokNv1Vs60C');
+});
+  
+
+
+
 bot.on('message', (msg) => {
   if (!msg) return;
   else if (!msg.from.username) {
