@@ -34,7 +34,7 @@ bot.onText(/\/ios/, function (msg) {
   
 bot.onText(/\/android/, function (msg) {
   var fromId = msg.from.id;
-  let andro = "BQADAgADFGwTAAGeGnkEAuURgPysKJYC";
+  let andro = "BQADBAADMgADvTrTBqWwrzDjz2m-Ag";
   bot.sendDocument(fromId, andro);
    bot.sendMessage(fromId, '1. Скачайте полученный файл(нажмите на иконку со стрелочкой)\n2.Нажмите на три точки в правом верхнем углу сообщения.\n3.В появившемся окне выберите "Apply localization file", затем в списке языков найдите нужный. ');
  });
