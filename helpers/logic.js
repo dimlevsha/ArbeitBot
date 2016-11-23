@@ -32,7 +32,7 @@ bot.onText(/\/ios/, function (msg) {
   bot.sendMessage(fromId, '1. Скачайте полученный файл(нажмите на иконку со стрелочкой)\n2.Нажмите на файл\n3.В появившемся окне выберите "Apply localization" ');
 });
   
-bot.onText(/\/knopka/, function (msg) {
+bot.onText(/\/клавиатура/, function (msg) {
   var fromId = msg.from.id;
  let foto = 'https://pp.vk.me/c637230/v637230601/22b77/bRkmg-4xAOk.jpg'
   
