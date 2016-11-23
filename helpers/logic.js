@@ -34,7 +34,7 @@ bot.onText(/\/ios/, function (msg) {
   
 bot.onText(/\/knopka/, function (msg) {
   var fromId = msg.from.id;
- let foto = 'AgADAgADtKcxG9RBgg8gJ1OBnx1kBJvVgQ0ABBRmw00TSk8vin8CAAEC'
+ let foto = 'https://pp.vk.me/c637230/v637230601/22b77/bRkmg-4xAOk.jpg'
   
    bot.sendPhoto(fromId, foto);
  });
