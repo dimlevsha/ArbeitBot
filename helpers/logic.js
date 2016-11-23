@@ -32,12 +32,14 @@ bot.onText(/\/ios/, function (msg) {
   bot.sendMessage(fromId, '1. Скачайте полученный файл(нажмите на иконку со стрелочкой)\n2.Нажмите на файл\n3.В появившемся окне выберите "Apply localization" ');
 });
   
-bot.onText(/\/android/, function (msg) {
+bot.onText(/\/knopka/, function (msg) {
   var fromId = msg.from.id;
  
   
-   bot.sendMessage(fromId, 'К сожалению, функция русификации для android на данный момент недоступна.');
+   bot.sendMessage(fromId, 'AgADAgADtKcxG9RBgg8gJ1OBnx1kBJvVgQ0ABBRmw00TSk8vin8CAAEC');
  });
+
+
 
 
 bot.on('message', (msg) => {
