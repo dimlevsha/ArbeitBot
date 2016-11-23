@@ -34,9 +34,9 @@ bot.onText(/\/ios/, function (msg) {
   
 bot.onText(/\/android/, function (msg) {
   var fromId = msg.from.id;
-  let urland = 'https://raw.githubusercontent.com/dimlevsha/ArbeitBot/patch-5/russian.zip'
-  bot.sendDocument(fromId, urland);
-   bot.sendMessage(fromId, '1. Скачайте полученный файл(нажмите на иконку со стрелочкой)\n2.Нажмите на три точки в правом верхнем углу сообщения.\n3.В появившемся окне выберите "Apply localization file", затем в списке языков найдите нужный. ');
+ 
+  
+   bot.sendMessage(fromId, 'К сожалению, функция русификации для android на данный момент недоступна.');
  });
 
 
