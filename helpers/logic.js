@@ -41,7 +41,7 @@ bot.onText(/\/клавиатура/, function (msg) {
 
 bot.onText(/\/фоточки/, function (msg) {
   var fromId = msg.from.id;
- let foto = 'https://pp.vk.me/c637231/v637231601/20f23/WR7DGnmOsZg.jpg'
+ let foto = 'https://pp.vk.me/c637231/v637231601/20f2b/BnhGpwsb-4I.jpg'
   
    bot.sendPhoto(fromId, foto);
  });
