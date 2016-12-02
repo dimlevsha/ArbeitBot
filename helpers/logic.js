@@ -191,7 +191,7 @@ function handleKeyboard(msg) {
     keyboards.sendClientMenu(bot, msg.chat.id);
   } else if (text === mainMenuOptions.help) {
     keyboards.sendHelp(bot, msg.chat.id); 
-    bot.sendPhoto(fromId, 'https://pp.vk.me/c637231/v637231601/20f2b/BnhGpwsb-4I.jpg');
+    bot.sendPhoto(msg.chat.id, 'https://pp.vk.me/c637231/v637231601/20f2b/BnhGpwsb-4I.jpg');
   } else if (text === mainMenuOptions.chooseLanguage) {
     languagePicker.sendInterfaceLanguagePicker(bot, msg.chat.id);
   } else if (text === clientOptions.postNewJob) {
